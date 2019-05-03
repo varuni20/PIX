@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Aladin|Merriweather');
+
+body{
+    background-color: whitesmoke;
+}
+h4{
+    font-family: 'Merriweather', serif;
+    font-size: 35px;
+    margin: 1em 0 0.25em;
+    color: black;
+    text-align: center;
+}
+
+h4:first-of-type {
+    margin-top: 0.5em;
+}
+
+table, tr, td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+tr {
+    height: 30px;
+}
+
+td {
+    width: 80px;
+}
+
+input[type=number] {
+    width: 6em;
+}
+
+.grid_Toggle {
+    border:hidden ;
+}
+
+.par,h4{
+    font-size: 45px;
+    color: black; 
+    font-family: 'Aladin', cursive;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.fom{
+    font-family: 'Merriweather', serif; 
+    font-size: 22px;
+    color: black;
+    text-align: center;
+}

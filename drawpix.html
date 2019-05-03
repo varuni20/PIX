@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Pix</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="https://fonts.googleapis.com/css?family=Aladin|Merriweather" rel="stylesheet">  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>    
+<link href="layout/styles/draw.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+</head>    
+<body>
+<nav class="navbar navbar-inverse navbar-sticky-top">
+  <ul class="nav navbar-nav" >
+    <li style=" font-size: 20px"><a href="index.html">Home</a></li>      
+    <li style="font-size: 20px;"><a href="convertpix.html">Pixel_Converter</a></li>
+    <li style="font-size: 20px;" ><a href="drawpix.html">Refresh</a></li>  
+  </ul>
+</nav>
+<div id="draw">
+    <p class="par">Draw Sprites</p>
+    <div class="container">
+        <div class="row">
+        <div class="col-sm-6">
+            <h4>Choose Grid Size</h4>
+            <form id="sizePicker" class="fom">
+                <p>Enter a number between 1 to 20.</p>
+                Grid Height:
+                <input type="number" id="input_height" name="height" min="1" max="20" required>
+                Grid Width:
+                <input type="number" id="input_width" name="width"  min="1" max="20" required>
+                <br><br>
+                <input type="submit">
+            </form>
+        </div>
+        <div class="col-sm-6">
+            <h4>Pick A Color</h4>
+            <p style="text-align: center"><input type="color" id="colorPicker"></p>
+        </div>
+        </div>
+        </div>
+    <h4>Canvas</h4>
+    <table id="pixel_canvas"></table>
+    <p class="fom"><input type="button" id="toggleBtn" value="Toggle Grid"></p>    
+</div>   
+<script>
+//Javascript code used to create a table for pixel art.
+
+$('#sizePicker').submit(function makeGrid(event) {  
+  $('table tr').remove();                          
+var rows=$('#input_height').val();                 
+var cells=$('#input_width').val();                 
+  for (var i=1;i<=rows;i++) {
+    $('table').append("<tr></tr>");
+    for (var j=1;j<=cells;j++) {
+      $( 'tr:last').append("<td></td>");         
+      $('td').attr('class','pixel');
+    }
+  }
+  event.preventDefault();                       
+});
+
+//Javascript code used to select and apply color to the cell of the canvas.
+$('#pixel_canvas').on('click','.pixel',function(){  
+  var pen=$('#colorPicker').val();
+  $(this).css('background-color',pen);
+});
+        
+// Toggle the grid after creating the pixel art..
+$('#toggleBtn').click('.pixel_canvas',function (){
+    $('td').toggleClass('grid_Toggle');
+});
+</script>
+</body>
+</html>

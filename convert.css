@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Aladin|Merriweather');
+.label {
+  float: left;
+  width: 290px;
+  margin-top: -6px;
+  text-align: right;
+}
+h3 {
+    font-family: 'Merriweather', serif;    
+  margin: 0;
+  font-size: 60px;
+  line-height: 1;
+  color: black;
+}
+h5 {
+    font-family: 'Merriweather', serif;
+  margin: 0;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 1;
+  color: black;
+}
+.content {
+  width: 620px;
+  min-height: 130px;
+  margin-left: 320px;
+  padding: 0 0 40px 30px;
+  text-align: left;
+}
+
+.drop .content {
+  min-height: 90px;
+  padding-bottom: 0;
+    padding-top: 64px;
+}
+.drop-zone {
+  position: center;
+  padding: 64px 64px;
+    vertical-align: middle;
+  background-color: lavenderblush;
+}
+.drop-over {
+  background-color: grey;
+}
+.drop-placeholder {
+    margin-bottom: 50px;
+   display: middle;
+  padding: 64px 64px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+}
+.drop-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+}
+.drop-help {
+  margin-left: 140px;
+  text-align: center;
+  white-space: nowrap;
+}
+.scale {
+  display: none;
+}
+.scale-slider {
+  width: 100%;
+  margin: 0;
+}
+.scale-labels {
+  font-size: 20px;
+}
+.scale-min {
+  float: left;
+}
+.scale-max {
+  float: right;
+}
+
+.preview {
+  display: none;
+}
+.preview-box {
+  max-width: 100%;
+  max-height: 480px;
+  overflow: auto;
+  font-size: 0;
+}
+
+.css {
+  display: none;
+}
+.css .content {
+  min-height: 90px;
+  padding-bottom: 0;
+}
+.css-output {
+  width: 100%;
+  height: 200px;
+  border: solid 1px #ddd;
+}
+
+.error {
+  color: #9e7575;
+}
+.loaded .drop .content {
+  min-height: 130px;
+  padding-bottom: 40px;
+}
+.loaded .scale,
+.loaded .preview,
+.loaded .css {
+  display: block;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  background-color: inherit;
+}
+
+.flex-container > div {
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
